@@ -9,13 +9,13 @@
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "preinstall": "npx npm-force-resolutions"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "graceful-fs": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "install": "^0.13.0",
@@ -31,5 +31,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.12.9"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   }
 }
